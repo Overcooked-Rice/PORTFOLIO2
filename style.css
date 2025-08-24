@@ -994,31 +994,6 @@ img {
   border: 1px solid #e6e6e6;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
-/* quick colors reminiscent of app icons */
-.tool-badges li[title="Photoshop"] {
-  background: #001e36;
-  color: #31a8ff;
-}
-.tool-badges li[title="Illustrator"] {
-  background: #330000;
-  color: #ff9a00;
-}
-.tool-badges li[title="Figma"] {
-  background: #111;
-  color: #f24e1e;
-}
-.tool-badges li[title="After Effects"] {
-  background: #0b093b;
-  color: #d291ff;
-}
-.tool-badges li[title="NX Siemens"] {
-  background: #009999;
-  color: #9993ff;
-}
-.tool-badges li[title="Blender"] {
-  background: #223656;
-  color: #f5792a;
-}
 
 /* tiny link row */
 .about-links {
@@ -1132,5 +1107,135 @@ img {
     animation: none !important;
     transform: none !important;
     opacity: 1 !important;
+  }
+}
+/* ===== MOBILE OPTIMALIZACE ===== */
+@media (max-width: 600px) {
+  .container {
+    padding-inline: 0.7rem;
+  }
+
+  .hero {
+    min-height: 90vh;
+    margin-bottom: 3rem;
+    padding-bottom: 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-inline: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .hero-description {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  .hero-actions {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero-media {
+    width: 100%;
+    justify-self: center;
+  }
+  .hero-photo {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4/5;
+  }
+  .hero-logo {
+    width: 48px;
+    top: -8px;
+    left: -8px;
+  }
+
+  .section {
+    padding-block: 3rem;
+  }
+  .section-title,
+  .about-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .section-work {
+    padding-top: 8rem;
+  }
+
+  .work-group {
+    padding: 3rem 0;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .work-hero,
+  .work-hero--book,
+  .work-hero--concept {
+    min-width: unset;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+  }
+  .work-grid-minis {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+  .work-copy {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  .work-h {
+    font-size: 1.2rem;
+  }
+
+  .about .about-wrap {
+    padding: 1rem;
+  }
+  .about-grid {
+    gap: 8px;
+    grid-template-columns: 1fr;
+  }
+  .about-card {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+  .about-card h3 {
+    font-size: 1.1rem;
+  }
+  .about-mascot img {
+    width: 80px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-block: 0.7rem;
+  }
+  .footer-links {
+    gap: 0.7rem;
+  }
+}
+
+/* Zajistí, že obrázky a SVG nebudou přesahovat */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .nav[data-open] {
+    display: grid;
+    transform: translateY(0);
+  }
+  .nav-toggle {
+    display: inline-block;
   }
 }
