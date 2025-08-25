@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HHC Life – Brand Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header (same as homepage) -->
+    <header>
+      <a class="brand" href="index.html">
+        <img src="res/logo.svg" alt="Jan Vlček logo" class="logo" width="60" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="index.html#projects">PROJECTS</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+        <li><a href="index.html#CV">CV</a></li>
+      </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+      <img
+        src="res/hhc-hero.jpg"
+        alt="HHC Life branding"
+        class="project-hero-img"
+      />
+      <div class="project-hero-text">
+        <h1>HHC Life – Brand Design</h1>
+        <p>A full identity system for a modern cannabis lifestyle brand.</p>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <main class="project-case">
+      <section class="project-section">
+        <h2>Challenge</h2>
+        <p>
+          HHC Life needed a complete brand identity that would stand out in the
+          competitive cannabis market while communicating trust, innovation, and
+          lifestyle appeal. The challenge was to design a system flexible enough
+          for packaging, apparel, and digital platforms, but consistent enough
+          to be instantly recognizable.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>Process</h2>
+        <ul>
+          <li>
+            <strong>Research & Strategy</strong> – explored cannabis + lifestyle
+            branding, color psychology, and market differentiation.
+          </li>
+          <li>
+            <strong>Logo Development</strong> – merged the geometry of a
+            honeycomb with the form of a cannabis leaf.
+          </li>
+          <li>
+            <strong>Packaging Design</strong> – created a dark premium look with
+            strong orange accents across flower, edibles, and extracts.
+          </li>
+          <li>
+            <strong>Merchandising</strong> – extended the identity into apparel
+            and brand patterns to build lifestyle recognition.
+          </li>
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2>Outcome</h2>
+        <p>
+          The result was a bold, scalable identity system that works across
+          packaging, print, and digital touchpoints. HHC Life’s products now
+          stand out with a consistent, premium look that appeals to both
+          lifestyle consumers and the cannabis community.
+        </p>
+      </section>
+
+      <!-- Image Gallery -->
+      <section class="project-gallery">
+        <img src="res/hhc-packaging.jpg" alt="HHC Life packaging design" />
+        <img src="res/hhc-shirt.jpg" alt="HHC Life apparel mockup" />
+        <img src="res/hhc-pattern.jpg" alt="HHC Life brand pattern" />
+        <img src="res/hhc-logo.jpg" alt="HHC Life logo" />
+      </section>
+    </main>
+
+    <!-- Back button -->
+    <div class="project-back">
+      <a href="index.html#projects" class="btn btn-cta-outline"
+        >← Back to Projects</a
+      >
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Jan Vlček. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // mobile menu toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector("header ul");
+      menuToggle.addEventListener("click", () =>
+        navList.classList.toggle("show")
+      );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

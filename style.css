@@ -1056,3 +1056,126 @@ h2,
     display: flex; /* ukáže se po kliknutí na ☰ */
   }
 }
+
+/*-------------HHC Life - Brand Design */
+.project-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+.project-hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.project-hero-text {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  color: #f6891e;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-case {
+  background: #11100d;
+  padding: clamp(40px, 6vw, 100px);
+  color: #fff;
+}
+.project-section {
+  margin-bottom: 3rem;
+}
+.project-section h2 {
+  color: #f6891e;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+.project-section p,
+.project-section ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+.project-section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.project-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.project-back {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.project-section p,
+.project-section ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Mid screens (tablet / small laptop) */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .project-section p,
+  .project-section ul {
+    max-width: 100%; /* let text use more space */
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1600px) {
+  .project-section p,
+  .project-section ul {
+    max-width: 1000px; /* a bit wider on big monitors */
+  }
+}
+
+.project-section p,
+.project-section ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  width: 100%;
+  max-width: clamp(600px, 70%, 1100px);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 900px) {
+  .project-section p,
+  .project-section ul {
+    max-width: 100%; /* mobile: full width */
+  }
+}
+
+@media (min-width: 1400px) {
+  .project-section p,
+  .project-section ul {
+    max-width: 1000px; /* big desktops */
+  }
+}
+/* Hide sketch on smaller resolutions */
+@media (max-width: 1600px) {
+  .about-img-sketch {
+    display: none;
+  }
+}
