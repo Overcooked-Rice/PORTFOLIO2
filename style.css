@@ -302,7 +302,7 @@ section {
 .work-h {
   margin: 0 0 8px;
   font-size: clamp(2rem, 3vw, 3rem);
-  color: #f29345;
+  color: #f6891e;
 }
 
 .work-p {
@@ -451,7 +451,7 @@ section {
 }
 
 .btn-cta-outline {
-  --accent: var(--accent, #f5891d);
+  --accent: var(--accent, #f6891e);
   color: var(--accent);
   background: transparent;
   border: 2px solid var(--accent);
@@ -599,7 +599,7 @@ section {
 .about-card h3 {
   font-weight: 700;
   font-family: "sentient-bold";
-  color: #f5891d;
+  color: #f6891e;
   font-size: 2rem;
 }
 
@@ -610,7 +610,7 @@ section {
   color: #222;
 }
 .about-h--accent {
-  color: #d87014;
+  color: #f6891e;
 }
 
 /* lists */
@@ -640,8 +640,8 @@ section {
 .about-mascot {
   display: grid;
   place-items: center;
-  background: #f5891d;
-  border-color: #f5891d;
+  background: #f6891e;
+  border-color: #f6891e;
 }
 .about-mascot img {
   width: min(160px, 60%);
