@@ -605,23 +605,25 @@
       });
     </script>
     <script>
-      const faders = document.querySelectorAll(".fade-in");
+      const parallaxLayers = document.querySelectorAll(".hero .parallax");
 
-      const appearOptions = {
-        threshold: 0.2,
-      };
-
-      const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
+      if (window.innerWidth > 768) {
+        // Desktop: s parallax efektem
+        window.addEventListener("scroll", function () {
+          let value = window.scrollY;
+          parallaxLayers.forEach((layer, index) => {
+            // každá vrstva má jinou rychlost
+            let speed = 1 - index * 0.1;
+            layer.style.top = value * speed + "px";
+          });
         });
-      }, appearOptions);
-
-      faders.forEach((fade) => {
-        appearOnScroll.observe(fade);
-      });
+      } else {
+        // Mobile: statické vrstvy nad sebou
+        parallaxLayers.forEach((layer) => {
+          layer.style.top = "0px"; // žádný posun
+          layer.style.position = "absolute"; // zůstanou přes sebe
+        });
+      }
     </script>
   </body>
 </html>

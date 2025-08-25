@@ -870,3 +870,133 @@ footer p {
     transform: translateX(-50%);
   }
 }
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  header ul {
+    flex-direction: column;
+    background: #11100d;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+  header ul.show {
+    display: flex;
+  }
+}
+section,
+.about,
+.section-work {
+  padding: clamp(40px, 8vw, 150px);
+}
+.work-hero,
+.work-hero--concept,
+.work-hero--book {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-width: unset;
+}
+h2,
+.about-text h2,
+.section-head,
+.marquee span {
+  font-size: clamp(1.5rem, 6vw, 4rem);
+}
+@media (max-width: 768px) {
+  .section-work .container.work-grid {
+    gap: 1rem;
+  }
+  .about-container {
+    gap: 20px;
+  }
+}
+#btn {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+/* ----- Mobile fixes ----- */
+@media (max-width: 768px) {
+  /* Sekce */
+  section,
+  .about,
+  .section-work,
+  .section-head {
+    padding: 40px 20px;
+    height: auto; /* nepřetlačuj výšku */
+  }
+
+  /* Obrázky */
+  .about-img,
+  .about-img-sketch,
+  .work-hero,
+  .work-hero--concept,
+  .work-hero--book {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-width: unset;
+  }
+
+  /* Texty a nadpisy */
+  h1,
+  h2,
+  h3,
+  .work-h,
+  .about-text h2,
+  .section-head,
+  .marquee span {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+  p,
+  .work-p,
+  .about-text p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+
+  /* Hero tlačítko */
+  #btn {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    padding: 8px 20px;
+  }
+
+  /* Navigace */
+  header {
+    padding: 15px 20px;
+  }
+  header ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    position: relative;
+    height: 100vh; /* hero zabere celou obrazovku */
+    overflow: hidden;
+  }
+
+  .hero img.parallax {
+    position: absolute; /* vrstvy zůstanou přes sebe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #text {
+    position: relative;
+    z-index: 5; /* aby text byl nad obrázky */
+    margin: 20px;
+    text-align: center;
+  }
+
+  #btn {
+    position: relative;
+    z-index: 6;
+    margin-top: 20px;
+  }
+}
