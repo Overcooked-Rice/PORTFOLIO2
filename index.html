@@ -11,6 +11,7 @@
       <a class="brand" href="#hero" aria-label="Homepage">
         <img src="res\logo.svg" alt="Jan Vlček logo" class="logo" width="60" />
       </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       <ul>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
@@ -624,6 +625,15 @@
           layer.style.position = "absolute"; // zůstanou přes sebe
         });
       }
+    </script>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector("header ul");
+
+      menuToggle.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
     </script>
   </body>
 </html>

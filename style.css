@@ -1010,3 +1010,49 @@ h2,
     z-index: 1000000;
   }
 }
+/* --- Mobile Header --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #f6891e;
+    cursor: pointer;
+    z-index: 11000;
+  }
+
+  header ul {
+    flex-direction: column;
+    background: #11100d;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  header ul.show {
+    display: flex;
+  }
+}
+/* Default = desktop: schovat hamburger */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile = zobrazit hamburger */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* zároveň na mobilech schovat původní horizontální menu */
+  header ul {
+    display: none; /* defaultně skryté */
+  }
+  header ul.show {
+    display: flex; /* ukáže se po kliknutí na ☰ */
+  }
+}
