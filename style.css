@@ -1000,3 +1000,13 @@ h2,
     margin-top: 20px;
   }
 }
+@media (max-width: 768px) {
+  #btn {
+    position: absolute; /* zůstane absolutně vevnitř .hero */
+    bottom: 30px; /* držíme ho dole */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0; /* zrušíme margin z mobilního přepisu */
+    z-index: 1000000;
+  }
+}
